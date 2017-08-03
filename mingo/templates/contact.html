@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Welcome to Coach Kelly's Website</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/coach.css' %}" type="text/css" media="all">
+</head>
+<body>
+
+<h1>Welcome to Coach Kelly's Website.</h1>
+<img src="{% static 'images/coach-head.jpg' %}">
+<p>
+For now, all that you'll find here is my athlete's <a href="{% url 'mingo.views.form_page' %}">timing data</a>. Enjoy!
+</p>
+<p>
+<strong>See you on the track!</strong>
+</p>
+</body>
+</html>

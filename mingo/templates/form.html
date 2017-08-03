@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>form page</title>
+     {% load static %}
+<link rel="stylesheet" href="{% static 'css/hfwwg.css' %}" type="text/css" media="all">
+</head>
+<body>
+<h1>{{ title }}</h1>
+
+<form action="{% url 'mingo.views.form_page' %}" method="post">
+    {% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit Sighting" />
+</form>
+<p>
+{{ links }}
+</p>
+</body>
+</html>
