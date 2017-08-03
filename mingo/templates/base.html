@@ -3,12 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>Sighting</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/coach.css' %}" type="text/css" media="all">
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>Django Test</p>
-    {% block mainbody %}
-       <p>original</p>
-    {% endblock %}
+    <h1 style="font-size: xx-large">&nbsp;&nbsp;&nbsp;&nbsp;OK!</h1>
+    <p style="margin-left: 10px; color: #cc6600; font-size: large">
+        <a href="{% url 'mingo.views.contact' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{% url 'mingo.views.form_page' %}">Back</a>
+    </p>
 </body>
 </html>

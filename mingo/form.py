@@ -1,9 +1,9 @@
 from django import forms
 
-"""_FINS = ['Falcate', 'Triangular', 'Rounded']
+_FINS = ['Falcate', 'Triangular', 'Rounded']
 _WHALES = ['Humpback', 'Orca', 'Blue', 'Killer', 'Begula', 'Fin', 'Gray', 'Sperm']
 _BLOWS = ['Tall', 'Bushy', 'Dense']
-_WAVES = ['Flat', 'Small', 'Moderate', 'Large', 'Breaking', 'High']"""
+_WAVES = ['Flat', 'Small', 'Moderate', 'Large', 'Breaking', 'High']
 
 class Sighting(forms.Form):
     name = forms.CharField()

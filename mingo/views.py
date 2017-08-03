@@ -7,10 +7,6 @@ from django.template import RequestContext
 
 
 # Create your views here.
-def hello(request):
-    context          = {}
-    context['hello'] = 'Hello World!'
-    return render(request, 'hello.html', context)
 
 def contact(request):
     return render_to_response('contact.html')
@@ -33,11 +29,12 @@ def form_page(request):
                               whale_type=whale_type, blow_type=blow_type,
                               wave_type=wave_type)
 
-            return HttpResponse('ok')  # Post提交后跳转
+            return render_to_response('base.html')  # Post提交后跳转
     else:
         form = Sighting()  # 空表单
 
     return render_to_response('form.html', {
         'title': 'Report a Sighting',
         'form': form,
-    }, context_instance=RequestContext(request) )
+        'links': 'Home',
+    }, context_instance=RequestContext(request))
