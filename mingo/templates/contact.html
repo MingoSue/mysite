@@ -1,17 +1,21 @@
 <html>
 <head>
-<title>Welcome to Coach Kelly's Website</title>
+<title>Welcome to Whales Sighting Website</title>
     {% load static %}
 <link rel="stylesheet" href="{% static 'css/coach.css' %}" type="text/css" media="all">
 </head>
 <body>
 
-<h1>Welcome to Coach Kelly's Website.</h1>
-<img src="{% static 'images/coach-head.jpg' %}">
-<p>
-For now, all that you'll find here is my athlete's <a href="{% url 'mingo.views.form_page' %}">timing data</a>. Enjoy!
+<h1>Welcome to Whales Sighting Website.</h1>
+<img src="{% static 'images/whale.jpg' %}">
+<p style="font-size: large">
+For now, all that you'll find here is  <a href="{% url 'mingo.views.show_data' %}">names</a>
+    who has seen the whales!
 </p>
-<p>
+<p style="font-size: large; margin-left: 30px">
+    OR &nbsp;&nbsp;you want to <a href="{% url 'mingo.views.form_page' %}">report</a> a possible sighting.
+</p>
+<p style="font-size: large">
 <strong>See you on the track!</strong>
 </p>
 </body>

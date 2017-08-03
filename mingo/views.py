@@ -11,6 +11,11 @@ from django.template import RequestContext
 def contact(request):
     return render_to_response('contact.html')
 
+def show_data(request):
+    names = DB.objects.all()
+    return render_to_response('show.html', locals())
+
+
 def form_page(request):
     if request.method == 'POST':  # 如果表单提交
         form = Sighting(request.POST)  # 绑定数据到表单
@@ -28,8 +33,8 @@ def form_page(request):
                               location=location, fin_type=fin_type,
                               whale_type=whale_type, blow_type=blow_type,
                               wave_type=wave_type)
-
             return render_to_response('base.html')  # Post提交后跳转
+
     else:
         form = Sighting()  # 空表单
 

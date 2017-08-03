@@ -1,0 +1,22 @@
+<html>
+<head>
+<title></title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/hfwwg.css' %}" type="text/css" media="all">
+</head>
+<body>
+
+
+<p style="margin-left: 10px; color: #cc6600; font-size: x-large">
+    <strong>Here are names:</strong>
+</p>
+{% for i in names %}
+<p style="margin-left: 15px">
+   {{ i.id }}&nbsp;&nbsp;:&nbsp;&nbsp;{{ i.name }}<br>
+</p>
+{% endfor %}
+<p style="margin-left: 10px; color: #cc6600; font-size: large">
+    <a href="{% url 'mingo.views.contact' %}">Home
+</p>
+</body>
+</html>
