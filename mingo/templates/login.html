@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h1>LogIn：</h1>
+<form method = 'post' enctype="multipart/form-data">{% csrf_token %}
+    <table>
+        {{uf.as_table}}
+    </table>
+    <input type="submit" value = "OK" style="margin-left: 120px; margin-top: 10px"/>
+</form>
+<br>
+<a href="{% url 'regist'  %}"><strong>Regist</strong></a>
+</body>
+</html>

@@ -18,3 +18,7 @@ class Sighting(forms.Form):
     whale_type = forms.ChoiceField(choices=_WHALES)
     blow_type = forms.ChoiceField(choices=_BLOWS)
     wave_type = forms.ChoiceField(choices=_WAVES)
+
+class UserForm(forms.Form):
+    username = forms.CharField(label='用户名',max_length=100)
+    password = forms.CharField(label='密码',widget=forms.PasswordInput())

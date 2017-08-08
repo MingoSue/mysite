@@ -5,7 +5,6 @@
 <link rel="stylesheet" href="{% static 'css/coach.css' %}" type="text/css" media="all">
 </head>
 <body>
-
 <h1>Welcome to Whales Sighting Website.</h1>
 <img src="{% static 'images/whale.jpg' %}">
 <p style="font-size: large">
@@ -16,7 +15,8 @@ For now, all that you'll find here is  <a href="{% url 'mingo.views.show_data' %
     OR &nbsp;&nbsp;you want to <a href="{% url 'mingo.views.form_page' %}">report</a> a possible sighting.
 </p>
 <p style="font-size: large">
-<strong>See you on the track!</strong>
+<strong>See you on the track!</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="{% url 'logout'  %}" >Logout !</a>
 </p>
 </body>
 </html>

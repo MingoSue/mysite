@@ -6,14 +6,14 @@
 </head>
 <body>
 <h1>{{ title }}</h1>
-<form action="{% url 'mingo.views.form_page' %}" method="post">{% csrf_token %}
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
     <table>
        {{ form.as_table }}
     </table>
     <input type="submit" value="Submit Sighting" style="margin-left: 120px; margin-top: 10px" />
 </form>
 <p style="margin-left: 10px; color: #cc6600; font-size: large">
-    <a href="{% url 'mingo.views.contact' %}">{{ links }}
+    <a href="{% url 'contact' %}">{{ links }}
 </p>
 </body>
 </html>
